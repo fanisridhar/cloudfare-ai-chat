@@ -1,0 +1,14 @@
+name = "cloudflare-ai-chat"
+main = "worker.js"
+compatibility_date = "2024-09-10"
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "MEMORY"
+class_name = "Memory"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["Memory"]
