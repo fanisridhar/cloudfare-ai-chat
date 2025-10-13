@@ -1,15 +1,26 @@
-# Cloudflare AI Chat (Workers AI + Memory)
+# 🌩️ Cloudflare AI Chat (Workers AI + Memory)
 
-Tiny AI chat API running on **Cloudflare Workers** using **Workers AI (Llama 3.3)** with memory (Durable Object or KV).
+A lightweight **AI-powered chat API** built on **Cloudflare Workers** using **Workers AI (Llama 3.3)** and persistent **memory** through Durable Objects (or KV as fallback).  
+It demonstrates how to deploy an intelligent, serverless chat backend that remembers user conversations.
 
-## API
-`POST /api/chat`
+---
+
+## 🚀 Features
+- ⚡ Runs entirely on **Cloudflare’s global edge network**
+- 🧠 Uses **Llama 3.3 8B Instruct** via **Workers AI**
+- 💾 Optional **Durable Object memory** to store conversation history
+- 🔐 Stateless fallback when memory is not bound
+- 🧩 Minimal API design (`POST /api/chat`)
+- 🌍 Deployed automatically to `*.workers.dev`
+
+---
+
+## 🧭 API Endpoint
+
+### `POST /api/chat`
+**Request:**
 ```json
-{ "session": "demo1", "message": "Who are you?" }
- cloudfare-ai-chat
-
-
-## Test
-curl -sX POST https://<your-worker>.workers.dev/api/chat \
-  -H "content-type: application/json" \
-  -d '{"session":"demo1","message":"Who are you?"}'
+{
+  "session": "demo1",
+  "message": "Who are you?"
+}
