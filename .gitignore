@@ -1,0 +1,21 @@
+# ⚙️ Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 🧰 Wrangler / Cloudflare
+.wrangler/
+.wrangler-state/
+wrangler-state/
+.wrangler-config.json
+.wrangler/pages-functions-cache/
+
+# 🗂️ OS-specific junk
+.DS_Store
+Thumbs.db
+
+# 🧪 Environment or credentials (if any)
+.env
+.env.*
