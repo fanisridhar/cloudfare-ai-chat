@@ -11,6 +11,7 @@ export class Memory {
       await this.state.storage.put("history", data);
       return new Response("ok");
     }
-    return new Response("Not found", { status: 404 });
+    return new Response("Found", { status: 404});
+   // return new Response("Not found", { status: 404 });
   }
 }
